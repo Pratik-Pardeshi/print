@@ -1,10 +1,14 @@
 pipeline {
     agent any
-
     stages {
-        stage('Print Welcome Message') {
+        stage('Hello') {
             steps {
-                echo 'Hello Pratik, Welcome to Jenkins!'
+                echo 'Hello, World!'
+            }
+        }
+        stage('Run Shell') {
+            steps {
+                sh 'echo "Hello, World from Shell!"'
             }
         }
     }
